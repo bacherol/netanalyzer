@@ -25,5 +25,13 @@ python3 worker.py
 ```
 
 
-_Disclaimer: This is the first version with very limited error treatments, etc._
+This is the first version with very limited error treatments, etc.
+It only prints a message when one issue is detected. For example:
+```
+{'different_path': True, 'packet_loss': {'172.68.16.42': '80.0%'}, 'high_latency': {'1.1.1.1': '107.19'}}
+```
+* different_path: `True` if the traceroute paths are different
+* packet_loss: It will show the hop + loss percentage
+* high_latency: It will show the hop + the latency 
 
+If no issues are detected, the tool exits gracefully without message.
